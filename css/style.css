@@ -381,7 +381,7 @@ img {
 .hero {
   height: 100vh;
   min-height: 600px;
-  background: linear-gradient(rgba(27, 42, 74, 0.7), rgba(27, 42, 74, 0.8)), url('../images/hero-banner.jpeg') center/cover no-repeat;
+  background: linear-gradient(rgba(27, 42, 74, 0.7), rgba(27, 42, 74, 0.8)), url('../images/hero-banner.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   position: relative;
@@ -728,7 +728,7 @@ img {
 
 /* Emergency CTA Section */
 .emergency-cta {
-  background: linear-gradient(rgba(27, 42, 74, 0.9), rgba(27, 42, 74, 0.9)), url('../images/emergency-bg.jpeg') center/cover fixed;
+  background: linear-gradient(rgba(27, 42, 74, 0.9), rgba(27, 42, 74, 0.9)), url('../images/emergency-bg.webp') center/cover fixed;
   color: var(--primary-white);
   text-align: center;
   padding: 100px 0;
@@ -1533,10 +1533,16 @@ textarea.form-control {
 
 /* Page Banner (for inner pages) */
 .page-banner {
-  background: linear-gradient(rgba(27, 42, 74, 0.8), rgba(27, 42, 74, 0.8)), url('../images/hero-banner.jpeg') center/cover;
+  background: linear-gradient(rgba(27, 42, 74, 0.8), rgba(27, 42, 74, 0.8)), url('../images/hero-banner.webp') center/cover;
   padding: 150px 0 80px;
   text-align: center;
   color: var(--primary-white);
+}
+
+/* Ensure page banner is always visible even with fade-up class */
+.page-banner.fade-up {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .page-title {
