@@ -761,6 +761,101 @@ img {
   100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
 }
 
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7); }
+  70% { transform: scale(1.1); box-shadow: 0 0 0 20px rgba(255, 107, 53, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 107, 53, 0); }
+}
+
+/* Trust Badges Section */
+.trust-badges {
+  background: var(--primary-white);
+  padding: 60px 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.trust-item {
+  padding: 20px;
+  background: var(--glass-bg);
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid #f0f0f0;
+}
+
+.trust-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary-orange);
+}
+
+.trust-item i {
+  font-size: 2.5rem;
+  color: var(--primary-orange);
+  margin-bottom: 15px;
+}
+
+.trust-item h3 {
+  font-size: 1.2rem;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+}
+
+.trust-item p {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+/* Same Day Service Banner */
+.same-day-service {
+  background: linear-gradient(135deg, rgba(255,107,53,0.1) 0%, rgba(255,107,53,0.02) 100%);
+  border-left: 5px solid var(--primary-orange);
+  padding: 40px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 60px auto;
+  max-width: 1000px;
+  box-shadow: var(--shadow-sm);
+}
+
+.same-day-content h3 {
+  font-size: 1.8rem;
+  color: var(--primary-navy);
+  margin-bottom: 10px;
+}
+
+.same-day-content p {
+  color: var(--text-gray);
+  margin-bottom: 0;
+  font-size: 1.05rem;
+}
+
+.same-day-icon {
+  font-size: 4rem;
+  color: var(--primary-orange);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .same-day-service {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+  }
+}
+
 /* Process Section */
 .process {
   background-color: var(--primary-white);
