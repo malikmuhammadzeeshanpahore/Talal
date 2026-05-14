@@ -6,7 +6,34 @@
   <meta name="description" content="Professional Washing Machine repair service in Saudi Arabia. We fix drum issues, motors, and leaks for all washing machine brands.">
   <title>Washing Machine Repair Service | Markaz Talal liltabreed</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Markaz Talal liltabreed",
+    "image": "https://markaztalal.com/images/hero-banner.webp",
+    "description": "Professional AC, Refrigerator, and Washing Machine repair services in Jeddah, Saudi Arabia.",
+    "url": "https://markaztalal.com",
+    "telephone": "+966531624801",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6540, 3519 Ankara, As Samir District",
+      "addressLocality": "Jeddah",
+      "postalCode": "23462",
+      "addressCountry": "SA"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "priceRange": "SAR 99 - 500",
+    "currenciesAccepted": "SAR"
+  }
+  </script>
 </head>
 <body>
 
@@ -28,9 +55,15 @@
         </div>
         <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
       </nav>
+      <div class="lang-toggle" aria-label="Switch Language">
+        <select style="background: transparent; border: 1px solid var(--glass-border); color: var(--primary-white); padding: 5px; border-radius: 5px;">
+          <option value="en">EN</option>
+          <option value="ar">العربية</option>
+        </select>
+      </div>
       <div class="nav-actions">
-        <div class="contact-info-top"><i class="fa-solid fa-phone-volume pulse-icon"></i><span>0531624801</span></div>
-        <a href="contact.html" class="btn btn-primary">Book Now</a>
+        <a href="tel:0531624801" class="btn btn-outline click-to-call" aria-label="Call Now"><i class="fa-solid fa-phone-volume pulse-icon"></i> 0531624801</a>
+        <a href="contact.html" class="btn btn-primary" aria-label="Book Service">Book Service</a>
       </div>
     </div>
   </header>
@@ -50,7 +83,7 @@
     <div class="container">
       <div class="about-container">
         <div class="about-content service-detail-content fade-up">
-          <img src="images/washing-machine.jpeg" alt="Washing Machine Repair">
+          <img loading="lazy" src="images/washing-machine.webp" alt="Washing Machine Repair">
           <h2 class="section-title">Expert Washing Machine Repair</h2>
           <p>A broken washing machine disrupts your daily routine. We provide prompt, reliable washing machine repair services across Jeddah to get your laundry routine back on track.</p>
           <p>From drum issues and motor repairs to fixing electronic displays, our experts handle automatic and semi-automatic machines with precision.</p>
@@ -210,6 +243,23 @@
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
+
+  <!-- Mobile Bottom Navigation (Thumb-Zone) -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:0531624801" class="bottom-bar-btn call-btn" aria-label="Call Us">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call</span>
+    </a>
+    <a href="contact.html" class="bottom-bar-btn book-btn" aria-label="Book Online">
+      <i class="fa-solid fa-calendar-check"></i>
+      <span>Book</span>
+    </a>
+    <a href="https://wa.me/966531624801" class="bottom-bar-btn wa-btn" aria-label="WhatsApp Us" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
 </body>
 </html>

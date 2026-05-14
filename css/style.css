@@ -1756,3 +1756,128 @@ textarea.form-control {
   }
 }
 
+
+/* Language Toggle */
+.lang-toggle select {
+  cursor: pointer;
+  outline: none;
+  font-family: var(--font-primary);
+  font-weight: 600;
+}
+.lang-toggle select option {
+  color: var(--primary-navy);
+}
+
+/* Header Click to Call */
+.click-to-call {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  padding: 10px 20px;
+}
+.click-to-call i {
+  color: var(--primary-orange);
+}
+
+/* Mobile Bottom Navigation (Thumb-Zone) */
+.mobile-bottom-bar {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--primary-white);
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  border-top: 1px solid var(--glass-border);
+}
+
+.bottom-bar-btn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 5px;
+  text-decoration: none;
+  color: var(--text-gray);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: var(--transition);
+  min-height: 44px; /* Minimum Touch Target */
+  min-width: 44px;
+}
+
+.bottom-bar-btn i {
+  font-size: 1.3rem;
+  margin-bottom: 4px;
+}
+
+.bottom-bar-btn.call-btn { color: var(--primary-navy); }
+.bottom-bar-btn.book-btn { color: var(--primary-orange); }
+.bottom-bar-btn.wa-btn { color: #25D366; }
+
+@media (max-width: 768px) {
+  .mobile-bottom-bar {
+    display: flex;
+  }
+  .whatsapp-float {
+    bottom: 80px; /* move up to avoid bottom bar */
+  }
+  body {
+    padding-bottom: 60px; /* space for bottom bar */
+  }
+  .nav-actions .click-to-call, .nav-actions .btn-primary {
+    display: none; /* Hide top header buttons on mobile to focus on thumb-zone */
+  }
+}
+
+/* Multi Step Form & Pricing Calc */
+.appliance-selector {
+  display: flex;
+  gap: 10px;
+}
+.app-card {
+  flex: 1;
+  text-align: center;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  padding: 15px 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.app-card input { display: none; }
+.app-card span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+.app-card span i { font-size: 1.5rem; color: var(--primary-orange); }
+.app-card input:checked + span { color: var(--primary-white); }
+.app-card input:checked + span i { color: var(--primary-white); }
+.app-card:has(input:checked) {
+  background: var(--primary-orange);
+  border-color: var(--primary-orange);
+}
+
+.pricing-calc {
+  background: var(--primary-white);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 40px;
+}
+.pricing-result {
+  background: linear-gradient(135deg, rgba(27,42,74,0.05), rgba(27,42,74,0.01));
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+.pricing-result h4 { color: var(--text-gray); font-size: 1rem; margin-bottom: 5px; }
+.pricing-result .est-price { font-size: 2.5rem; color: var(--primary-navy); font-weight: 800; font-family: 'Outfit'; }
